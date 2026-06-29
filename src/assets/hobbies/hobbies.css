@@ -3,19 +3,20 @@
     flex-direction: column;
 }
 
+
 .hobby-grid {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    gap: 2rem 3rem;
     justify-content: center;
-    column-gap: 3rem;
-
 }
 
 .row-1-3 {
     grid-row: 1/3;
-    width: clamp(200px, 339px);
+   
+    width: clamp(170px, 25vw, 340px);
 }
+
 
 .grid-5 {
     display: flex;
@@ -23,7 +24,7 @@
     align-items: center;
 }
 
-.hobby-grid p {
+.hobby-grid  div {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -68,6 +69,12 @@
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;
+    transition: 0.8s ease;
+}
+
+.button-link:hover {
+transform: scale(1.05);
+text-decoration: underline;
 }
 
 
@@ -75,4 +82,132 @@
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+
+@media (max-width: 1000px) {
+
+    .hobby-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .row-1-3 {
+        grid-column: 1/3;
+        grid-row: auto;
+        justify-self: center;
+    }
+
+    .grid-5 {
+        grid-column: span 2;
+        
+    }
+
+    .link-box {
+        grid-column: span 2;
+    }
+    .hobby-img {
+        grid-column: 1/3;
+        justify-self: center;
+        width: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .hobby-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .row-1-3 {
+        width: min(90%, 260px);
+    }
+
+    .grid-5 {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .learning-sec h4 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hobby-grid div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hobby-img {
+        width: 200px;
+    }
+
+    .hobby-grid ul {
+        padding-left: 1.2rem;
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+.learning-sec {
+    border-bottom: 2px solid;
+}
+
+.hobby-grid {
+    margin-bottom: 2rem;
+}
+
+.sport-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+
+.sport-card {
+    width: 100%;
+    max-width: 320px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,.15);
+}
+
+.sport-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.card-content button {
+    width: fit-content;
+    padding: .6rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sport-description {
+    margin-top: 1.5rem;
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+@media (max-width: 952px) {
+    .sport-grid :last-child {
+        grid-column: 1/3;
+        justify-self: center;
+    }
 }
