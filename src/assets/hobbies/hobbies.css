@@ -1,4 +1,78 @@
 .hobby-title {
-    display:flex;
+    display: flex;
     flex-direction: column;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    column-gap: 3rem;
+
+}
+
+.row-1-3 {
+    grid-row: 1/3;
+    width: clamp(200px, 339px);
+}
+
+.grid-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobby-grid p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hobby-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hobby-grid .p-title {
+    font-weight: 600;
+}
+
+.learning-sec h3 {
+    font-size: 1.3rem;
+    display: flex;
+    justify-self: center;
+    text-decoration: underline;
+
+}
+
+.learning-sec h4 {
+    margin-left: clamp(40px, 7vw, 180px);
+}
+
+@media (max-width: 1220px) {
+    .row-1-3 {
+        width: 170px;
+    }
+}
+
+.button-link {
+    background-color: #629ce9;
+    border-radius: 12px;
+    width: 175px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.link-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

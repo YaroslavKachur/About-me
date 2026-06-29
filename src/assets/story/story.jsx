@@ -2,7 +2,7 @@ import "./story.css"
 
 export default function Story() {
     return (
-        <div>
+        <div className="page-content">
             <h2 className="hero">My Story</h2>
 
             <div className="story">
