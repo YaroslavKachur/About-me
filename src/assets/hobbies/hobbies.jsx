@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export default function Hobbies() {
-    const [open, setOpen] = useState(false)
+    const [openCard, setOpenCard] = useState(null);
     const sport =
         [
             { id: 1, name: "Swimming", src: "/src/assets/images/duck.png ", image: "duck on the lake", since: "Since: 2017", club: "Sport club: Elit, in Ukraine", description: "I practiced swimming from the age of 8 to 13. I can swim freestyle, breaststroke and butterfly. Swimming helps me relax, reduce stress and stay active throughout the year" },
@@ -124,15 +124,24 @@ export default function Hobbies() {
                 </div>
             </section>
             <section className="sport-grid">
-            {sport.map((card) => (
-                <div className="sport-card"> 
-                <img src={card.src} alt={card.image} className="sport-image" /> 
-                <div className="card-content"> 
-                    <h3>{card.name}</h3> 
-                    <p>{card.since}</p> 
-                    <p>{card.club}</p> 
-                    <button className="description-btn" onClick={() => setOpen(!open)} > {open ? "Hide description" : "Description"} </button> {open && (<p className="sport-description"> {card.description} </p>)} </div> </div>
-            ))} </section>
+                {sport.map((card) => (
+                    <div className="sport-card">
+                        <img src={card.src} alt={card.image} className="sport-image" />
+                        <div className="card-content">
+                            <h3>{card.name}</h3>
+                            <p>{card.since}</p>
+                            <p>{card.club}</p>
+                            <button
+                                onClick={() =>
+                                    setOpenCard(openCard === card.id ? null : card.id)}>
+                                {openCard === card.id ? "Hide description" : "Description"}
+                            </button>
+
+                            {openCard === card.id && (
+                                <p className="sport-description">
+                                    {card.description}
+                                </p>)} </div> </div>
+                ))} </section>
         </div>
     )
 }
