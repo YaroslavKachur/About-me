@@ -3,7 +3,7 @@ import "./story.css"
 export default function Story() {
     return (
         <div className="page-content">
-            <h2 className="hero">My Story</h2>
+            <h2 className="hero">My story</h2>
 
             <div className="story">
                 <img src="/src/assets/images/Me.png" alt="the guy with his snow sculpture" />

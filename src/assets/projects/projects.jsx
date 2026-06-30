@@ -102,6 +102,8 @@ export default function Projects() {
                         <strong>rem</strong>, and modern component-based development.
                     </p>
                     <p>
+
+                        
                         This project will never really be finished. I plan to continue
                         improving it as I gain new knowledge, complete new projects, and
                         develop as a programmer.
