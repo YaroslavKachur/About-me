@@ -1,0 +1,398 @@
+.typewriter {
+    display: flex;
+    justify-self: center;
+    font-weight: 550;
+    padding: 0px 5px;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.10);
+}
+
+.typewriter h2 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid black;
+    width: 0;
+
+    animation:
+        typing 1.5s steps(11) forwards,
+        blink .8s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 11ch;
+    }
+}
+
+@keyframes blink {
+
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+.projects-text-shadow {
+    text-shadow: 0px 2px 2px #0040FF49;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 80vw;
+    margin: 60px auto;
+    column-gap: 120px;
+}
+
+.done,
+.undone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.project-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .08);
+
+    overflow: hidden;
+}
+
+/* Колір рамки */
+
+.done .project-card {
+    border: 2px solid #00FFF2;
+}
+
+.undone .project-card {
+    border: 2px solid #FFD1A1;
+}
+
+/* якщо є New */
+
+.project-card:has(.new) {
+    transform: translateY(-10px);
+}
+
+/* картинка */
+
+.project-card-image {
+    width: 320px;
+    border-radius: 6px;
+}
+
+/* кнопка */
+
+.anchor-button {
+
+    padding: 10px 16px;
+
+    border: none;
+
+    background: #5B5B5B;
+
+    color: white;
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+    border-radius: 5px;
+}
+
+.anchor-button:hover {
+
+    background: #3f3f3f;
+
+}
+
+
+
+.new {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    transform: translate(20%, -25%);
+
+    background: #FFD2A0;
+
+    color: white;
+
+    padding: .65rem 1.6rem;
+
+    border-radius: 18px;
+
+    font-weight: bold;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .18);
+
+}
+
+/* В'їзд карток */
+
+.done .project-card {
+
+    animation: leftCard .9s ease;
+
+}
+
+.undone .project-card {
+
+    opacity: 0;
+
+    transform: translateX(120px);
+
+    animation: slideIn .8s ease forwards;
+
+}
+
+.undone .project-card:nth-of-type(2) {
+
+    animation-delay: .15s;
+
+}
+
+.undone .project-card:nth-of-type(3) {
+
+    animation-delay: .35s;
+
+}
+
+@keyframes slideIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(120px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+@keyframes leftCard {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-120px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+/* Відблиск */
+
+.project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -180%;
+
+    left: -70%;
+
+    width: 25%;
+
+    height: 420%;
+
+    background:
+        linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, .7),
+            transparent);
+
+    transform: rotate(20deg);
+
+    animation: shine 5s linear infinite;
+
+}
+
+@keyframes shine {
+
+    0% {
+        left: -70%;
+    }
+
+    15% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+@media (max-width:1024px){
+
+    .projects{
+
+        width:90vw;
+
+        column-gap:60px;
+
+    }
+
+    .project-card-image{
+
+        width:260px;
+
+    }
+
+    .anchor-button{
+
+        font-size:1.4rem;
+
+    }
+
+}
+
+
+
+@media (max-width:768px){
+
+    .projects{
+
+        grid-template-columns:1fr;
+
+        row-gap:60px;
+
+        justify-items:center;
+
+    }
+
+    .done{
+
+        grid-column:auto;
+
+    }
+
+    .undone{
+
+        grid-column:auto;
+
+    }
+
+    .project-card{
+
+        width:100%;
+        max-width:360px;
+
+    }
+
+    .project-card-image{
+
+        width:100%;
+
+    }
+
+    .typewriter{
+
+        margin-bottom:30px;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .projects{
+
+        width:95vw;
+
+        margin-top:35px;
+
+    }
+
+    .project-card{
+
+        padding:15px;
+
+    }
+
+    .project-card-image{
+
+        width:100%;
+
+    }
+
+    .anchor-button{
+
+        width:100%;
+
+        font-size:1.2rem;
+
+        padding:12px 0;
+
+    }
+
+    .new{
+
+        padding:.45rem 1rem;
+
+        font-size:.9rem;
+
+    }
+
+    .typewriter h2{
+
+        font-size:2rem;
+
+    }
+
+    .done h3,
+    .undone h3{
+
+        font-size:1.6rem;
+
+        text-align:center;
+
+    }
+
+}
+

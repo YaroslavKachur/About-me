@@ -4,6 +4,7 @@ import Nav from './assets/nav/nav'
 import Story from './assets/story/story'
 import Hobbies from './assets/hobbies/hobbies'
 import './App.css'
+import Projects from './assets/projects/projects'
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
     <Nav></Nav>
 
     <Routes>
-      <Route path='/projects' element={"not ready"}/>
+      <Route path='/projects' element={<Projects/>}/>
       <Route path='/' element={<Story/>}/>
       <Route path='/hobbies' element={<Hobbies/>}/>
     </Routes>
