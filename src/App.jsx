@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Nav from './assets/nav/nav'
-import Story from './assets/story/story'
-import Hobbies from './assets/hobbies/hobbies'
+import Nav from '../nav/nav'
+import Story from '../story/story'
+import Hobbies from '../hobbies/hobbies'
 import './App.css'
-import Projects from './assets/projects/projects'
+import Projects from '../projects/projects'
 
 function App() {
   

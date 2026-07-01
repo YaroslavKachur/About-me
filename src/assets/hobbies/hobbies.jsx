@@ -14,7 +14,7 @@ export default function Hobbies() {
         [
             { id: 1, name: "Swimming", src: duck, image: "duck on the lake", since: "Since: 2017", club: "Sport club: Elit, in Ukraine", description: "I practiced swimming from the age of 8 to 13. I can swim freestyle, breaststroke and butterfly. Swimming helps me relax, reduce stress and stay active throughout the year" },
             { id: 2, name: "Running", src: forest, image: "forest", since: "Since: 2026", club: "Sport club: false", description: "I enjoy running in nature, especially around villages and lakes. The peaceful environment helps me clear my mind and stay active. After a run, I sometimes go for a swim to relax and recover." },
-            { id: 3, name: "Biking",  src: steckborn, image: "me next to steckborn", since: "Since: 2023", club: "Sport club: false", description: "I like cycling because it gives me a sense of freedom and allows me to cover long distances. One memorable trip was riding from Ossingen to Steckborn just to spend some time swimming in the Untersee. Combining sport, nature and exploration makes cycling especially enjoyable for me." }
+            { id: 3, name: "Biking", src: steckborn, image: "me next to steckborn", since: "Since: 2023", club: "Sport club: false", description: "I like cycling because it gives me a sense of freedom and allows me to cover long distances. One memorable trip was riding from Ossingen to Steckborn just to spend some time swimming in the Untersee. Combining sport, nature and exploration makes cycling especially enjoyable for me." }
         ];
     return (
         <div className="page-content">

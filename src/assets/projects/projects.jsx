@@ -1,6 +1,6 @@
 import "./projects.css";
 import langbridge from "../images/langbridge.svg";
-import portfolio from "../images/Group 2.svg";
+import portfolio from "../images/Group2.svg";
 import reactCourse from "../images/react-course.svg";
 
 export default function Projects() {
