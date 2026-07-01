@@ -1,4 +1,7 @@
 import "./projects.css";
+import langbridge from "../images/langbridge.svg";
+import portfolio from "../images/Group 2.svg";
+import reactCourse from "../images/react-course.svg";
 
 export default function Projects() {
     return (
@@ -12,7 +15,7 @@ export default function Projects() {
                     <h3 className="blue-text-shadow">Done</h3>
                     <div className="project-card">
                         <img
-                            src="/src/assets/images/langbridge.svg"
+                            src={langbridge}
                             alt="LangBridge"
                             className="project-card-image"
                         />
@@ -30,7 +33,7 @@ export default function Projects() {
                             New
                         </span>
                         <img
-                            src="/src/assets/images/Group 2.svg"
+                            src={portfolio}
                             alt="Portfolio"
                             className="project-card-image"
                         />
@@ -41,7 +44,7 @@ export default function Projects() {
                     <div className="project-card">
                         
                         <img
-                            src="/src/assets/images/react-course.svg"
+                            src={reactCourse}
                             alt="React Course"
                             className="project-card-image"
                         />
