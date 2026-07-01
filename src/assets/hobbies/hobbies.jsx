@@ -1,20 +1,14 @@
 import "./hobbies.css"
 import { Link } from "react-router-dom"
 import { useState } from "react";
-import duck from "../images/duck.png";
-import forest from "../images/forest.png";
-import steckborn from "../images/steckborn.png";
-import digital from "../images/digital.png";
-import math from "../images/math.png";
-import language from "../images/language.png";
 
 export default function Hobbies() {
     const [openCard, setOpenCard] = useState(null);
     const sport =
         [
-            { id: 1, name: "Swimming", src: duck, image: "duck on the lake", since: "Since: 2017", club: "Sport club: Elit, in Ukraine", description: "I practiced swimming from the age of 8 to 13. I can swim freestyle, breaststroke and butterfly. Swimming helps me relax, reduce stress and stay active throughout the year" },
-            { id: 2, name: "Running", src: forest, image: "forest", since: "Since: 2026", club: "Sport club: false", description: "I enjoy running in nature, especially around villages and lakes. The peaceful environment helps me clear my mind and stay active. After a run, I sometimes go for a swim to relax and recover." },
-            { id: 3, name: "Biking", src: steckborn, image: "me next to steckborn", since: "Since: 2023", club: "Sport club: false", description: "I like cycling because it gives me a sense of freedom and allows me to cover long distances. One memorable trip was riding from Ossingen to Steckborn just to spend some time swimming in the Untersee. Combining sport, nature and exploration makes cycling especially enjoyable for me." }
+            { id: 1, name: "Swimming", src: "/public/images/duck.png", image: "duck on the lake", since: "Since: 2017", club: "Sport club: Elit, in Ukraine", description: "I practiced swimming from the age of 8 to 13. I can swim freestyle, breaststroke and butterfly. Swimming helps me relax, reduce stress and stay active throughout the year" },
+            { id: 2, name: "Running", src: "/public/images/forest.png", image: "forest", since: "Since: 2026", club: "Sport club: false", description: "I enjoy running in nature, especially around villages and lakes. The peaceful environment helps me clear my mind and stay active. After a run, I sometimes go for a swim to relax and recover." },
+            { id: 3, name: "Biking", src: "/public/images/steckborn.png", image: "me next to steckborn", since: "Since: 2023", club: "Sport club: false", description: "I like cycling because it gives me a sense of freedom and allows me to cover long distances. One memorable trip was riding from Ossingen to Steckborn just to spend some time swimming in the Untersee. Combining sport, nature and exploration makes cycling especially enjoyable for me." }
         ];
     return (
         <div className="page-content">
@@ -24,7 +18,7 @@ export default function Hobbies() {
                 <div>
                     <h4 className="hobby-title">Digital Creativity <span>Started: 2025</span>   </h4>
                     <div className="hobby-grid">
-                        <img src={digital} alt="digital icons" className="row-1-3" />
+                        <img src="/public/images/digital.png" alt="digital icons" className="row-1-3" />
                         <div>
                             <span className="p-title">Activities </span>
                             <ul>
@@ -92,7 +86,7 @@ export default function Hobbies() {
                             </ul>
                         </div>
 
-                        <img src={math} alt="Math" className="hobby-img" style={{ width: "350px" }} />
+                        <img src="/public/images/math.png" alt="Math" className="hobby-img" style={{ width: "350px" }} />
 
                     </div>
                 </div>
@@ -104,7 +98,7 @@ export default function Hobbies() {
 
                     <div className="hobby-grid">
 
-                        <img src={language} alt="Languages" className="hobby-img" />
+                        <img src="/public/images/language.png" alt="Languages" className="hobby-img" />
 
                         <div>
                             <span className="p-title">What I enjoy</span>
