@@ -8,7 +8,8 @@ export default function Story() {
             <h2 className="hero">My story</h2>
 
             <div className="story">
-                <img src="/public/images/Me.png" alt="the guy with his snow sculpture" />
+                <img src={`${import.meta.env.BASE_URL}images/Me.png`} alt="the guy with his snow sculpture" />
+
                 <div className="content-box">
                     <p className="bla-blah"> Before moving to Switzerland, I lived in Chernivtsi, Ukraine. At school, I was quiet and did not focus much on studying. I spent most of my free time at my grandmother’s restaurant or playing computer games with friends.
                         Since childhood, I was interested in creating video games. My father supported this and often found free programming courses for me, but I rarely attended them at the time.

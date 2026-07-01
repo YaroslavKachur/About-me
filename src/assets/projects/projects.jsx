@@ -13,7 +13,7 @@ export default function Projects() {
                     <h3 className="blue-text-shadow">Done</h3>
                     <div className="project-card">
                         <img
-                            src="/public/images/langbridge.svg"
+                            src={`${import.meta.env.BASE_URL}images/langbridge.svg`}
                             alt="LangBridge"
                             className="project-card-image"
                         />
@@ -31,7 +31,8 @@ export default function Projects() {
                             New
                         </span>
                         <img
-                            src="/public/images/Group2.svg"
+                            src={`${import.meta.env.BASE_URL}images/Group2.svg`}
+
                             alt="Portfolio"
                             className="project-card-image"
                         />
@@ -42,7 +43,7 @@ export default function Projects() {
                     <div className="project-card">
                         
                         <img
-                            src="/public/images/react-course.svg"
+                            src={`${import.meta.env.BASE_URL}images/react-course.svg`}
                             alt="React Course"
                             className="project-card-image"
                         />
